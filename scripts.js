@@ -304,7 +304,7 @@ function createPostRequest() {
       console.log(subscription);
 
     // Use fetch API to post this to your Flask API
-    fetch('http://127.0.0.1:5000/documents', {
+    fetch('https://lobster-app-tpwzh.ondigitalocean.app/documents', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
