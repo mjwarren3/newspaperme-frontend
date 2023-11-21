@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Newspaper.me | The fully personalized email newsletter</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <nav>
+        <a href="./index.html">Nav content</a>
+        
+    </nav> -->
+
+    <div id="mainContainer">
+        <div id="subscribeContainer">
+            <h1 class="neo-brutalism-text">newspaper<span class="green-text">.</span>me</h1>
+            <div class="leftBox">
+                <br>
+                <div class="intro-title">Build your own fully customized daily email newsletter</div>
+                <p class="subText">
+                    Start by adding a new module using the editor on the right of the screen (or bottom on mobile).
+                    <br>
+                    Once you're happy with the email you've crafted, enter your email and hit the subscribe button below.
+                </p>
+                <hr>
+                <p class="subText">If you are a media business interested in partnering with us to automate your daily emails, contact us at mike@newspaper.me or hit the button below.</p>
+                <btn id="contactBtn"><a href="mailto:mike@givecanary.com">Contact Us</a></btn>
+            </div>
+        </div>
+
+        <div id="editorContainer">
+            <div id ="editorBox">
+                <div id="blocksContainer">
+                    <h1>Good morning!</h1>
+                    <p class="emailheader">Your email will start with a quick intro from newspaper.me,
+                        but the rest is up to you! <br>Click the "Add New Section" below to get started,
+                        or check out an <a href="./index.html">example</a> to see what your email will look like.
+                    </p>
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="closeBtn">&times;</span> 
+                        <div id="buttonContainer">
+                            <button class="sectionButton" id="eventBtn">
+                                <div class="sectionTitle">Events</div>
+                                <div class="sectionDescription">The best local events in your community today</div>
+                            </button>
+                            <button class="sectionButton" id="newsBtn">
+                                <div class="sectionTitle">Headlines</div>
+                                <div class="sectionDescription">Summarized articles from your favorite news source</div>
+                            </button>
+                            <button class="sectionButton" id="jokeBtn">
+                                <div class="sectionTitle">Dad Joke</div>
+                                <div class="sectionDescription">A random Dad Joke to brighten your morning</div>
+                            </button>
+                            <button class="sectionButton" id="quoteBtn">
+                                <div class="sectionTitle">Motivational Quote</div>
+                                <div class="sectionDescription">An inspirational quote to start your day</div>
+                            </button>
+                        </div>
+                        <form id="itemForm" style="display:none;">
+                            <input type="text" id="itemInput" placeholder="Enter item" required>
+                            <input type="submit" value="Submit">
+                        </form>
+                        <form id="eventForm" style="display:none;">
+                            <div class="sectionDescripton">Enter your zip code, so we can bring you your local events.</div>
+                            <input type="text" id="eventInput" class="textInput" placeholder="Enter Zip" required>
+                            <input type="submit" class="buttonInput" value="Save">
+                        </form>
+                        <form id="newsForm" style="display:none;">
+                            <div class="sectionDescripton">Choose a news source to get headlines from.</div>
+                            <select id="newsInput" class="textInput" required>
+                                <option value="espn">ESPN</option>
+                                <option value="bbc-news">BBC</option>
+                                <option value="cnn">CNN</option>
+                            </select>
+                            <input type="submit" class="buttonInput" value="Save">
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <button id="openModalBtn">+ Add New Section</button>
+                </div>
+                <div class="emailfooter">
+                    <p class="footerpar emailfooter">
+                        Update your email preferences or unsubscribe here.
+                        View our privacy policy here.<br>
+                        
+
+                        Copyright © 2023 Newspaper.me. All rights reserved.
+                        269 Commercial St, Portland, ME
+                    </p>
+                </div>
+            </div>
+            <div class="center-it">
+                <p>Once you're happy with how it looks, hit subscribe!</p>
+            </div>
+            <form id="subscribeForm">
+                <!-- <div class="intro-title">your fully personalized</div>
+                <div class="intro-title padding-bottom">daily email newsletter</div> -->
+                <div id="emailHolder">
+                    <input id="emailInput" type="email" placeholder="Email">
+                </div>
+                <div id="subscribeHolder">
+                    <btn type="submit" id="subscribeBtn">Subscribe</btn>
+                </div>
+            </form>
+            <div class="center-it" id="thankyou">
+                Thank you for subscribing! Get ready for your newsletter tomorrow morning!
+            </div>
+            <div id="error-message" class="center-it" style="color: darkred;"></div>
+        </div>
+    </div>
+    <!-- <footer>
+        Footer
+    </footer> -->
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+    </body>
+</html>
