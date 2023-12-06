@@ -32,7 +32,7 @@
                     Once you're happy with the email you've crafted, enter your email and hit the subscribe button below.
                 </p>
                 <hr>
-                <p class="subText">If you are a media business interested in partnering with us to automate your daily emails, contact us at mike@newspaper.me or hit the button below.</p>
+                <p class="subText">If you are a media business interested in partnering with us to automate your daily emails, contact us at mike@givecanary.com or hit the button below.</p>
                 <btn id="contactBtn"><a href="mailto:mike@givecanary.com">Contact Us</a></btn>
             </div>
         </div>
@@ -42,8 +42,7 @@
                 <div id="blocksContainer">
                     <h1>Good morning!</h1>
                     <p class="emailheader">Your email will start with a quick intro from newspaper.me,
-                        but the rest is up to you! <br>Click the "Add New Section" below to get started,
-                        or check out an <a href="./index.html">example</a> to see what your email will look like.
+                        <br> but the rest is up to you! <br><strong>Click the "Add New Section" below to get started!</strong>
                     </p>
                 </div>
                 <div id="myModal" class="modal">
@@ -59,12 +58,20 @@
                                 <div class="sectionDescription">Summarized articles from your favorite news source</div>
                             </button>
                             <button class="sectionButton" id="jokeBtn">
-                                <div class="sectionTitle">Dad Joke</div>
-                                <div class="sectionDescription">A random Dad Joke to brighten your morning</div>
+                                <div class="sectionTitle">Daily Joke</div>
+                                <div class="sectionDescription">A random joke to brighten your morning</div>
                             </button>
                             <button class="sectionButton" id="quoteBtn">
-                                <div class="sectionTitle">Motivational Quote</div>
+                                <div class="sectionTitle">Inspirational Quote</div>
                                 <div class="sectionDescription">An inspirational quote to start your day</div>
+                            </button>
+                            <button class="sectionButton" id="riddleBtn">
+                                <div class="sectionTitle">Riddle</div>
+                                <div class="sectionDescription">A riddle to test your brain in the morning</div>
+                            </button>
+                            <button class="sectionButton" id="weatherBtn">
+                                <div class="sectionTitle">Weather</div>
+                                <div class="sectionDescription">Today's weather in your neighborhood</div>
                             </button>
                         </div>
                         <form id="itemForm" style="display:none;">
@@ -85,6 +92,11 @@
                             </select>
                             <input type="submit" class="buttonInput" value="Save">
                         </form>
+                        <form id="weatherForm" style="display:none;">
+                            <div class="sectionDescripton">Enter your zip code, so we can bring you your local weather.</div>
+                            <input type="text" id="weatherInput" class="textInput" placeholder="Enter Zip" required>
+                            <input type="submit" class="buttonInput" value="Save">
+                        </form>
                     </div>
                 </div>
                 <div>
@@ -92,12 +104,10 @@
                 </div>
                 <div class="emailfooter">
                     <p class="footerpar emailfooter">
-                        Update your email preferences or unsubscribe here.
-                        View our privacy policy here.<br>
+                        Update your email preferences or unsubscribe here.<br>
                         
 
                         Copyright © 2023 Newspaper.me. All rights reserved.
-                        269 Commercial St, Portland, ME
                     </p>
                 </div>
             </div>

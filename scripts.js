@@ -1,12 +1,15 @@
 const openModalBtn = document.getElementById('openModalBtn');
 const modal = document.getElementById('myModal');
 const eventform = document.getElementById('eventForm');
+const weatherform = document.getElementById('weatherForm');
 const newsform = document.getElementById('newsForm');
 const itemList = document.getElementById('itemList');
 const newsBtn = document.getElementById('newsBtn');
 const eventBtn = document.getElementById('eventBtn');
+const weatherBtn = document.getElementById('weatherBtn');
 const jokeBtn = document.getElementById('jokeBtn');
 const quoteBtn = document.getElementById('quoteBtn');
+const riddleBtn = document.getElementById('riddleBtn');
 const thankyou = document.getElementById('thankyou');
 const buttonContainer = document.getElementById('buttonContainer');
 const closeModalBtn = document.querySelector('.closeBtn');
@@ -73,6 +76,11 @@ eventBtn.addEventListener('click', () => {
     eventform.style.display = 'block';
 });
 
+weatherBtn.addEventListener('click', () => {
+    buttonContainer.style.display = 'none';
+    weatherform.style.display = 'block';
+});
+
 newsBtn.addEventListener('click', () => {
     buttonContainer.style.display = 'none';
     newsform.style.display = 'block';
@@ -81,20 +89,26 @@ newsBtn.addEventListener('click', () => {
 // Modified add to list logic for blocks instead of list items
 jokeBtn.addEventListener('click', () => {
     console.log("joke button clicked");
-    addBlock("Dad Joke", "joke", "no description");
+    addBlock("😂 Daily Joke", "joke", "no description");
     modal.style.display = 'none';
     resetModal();
 });
 
 quoteBtn.addEventListener('click', () => {
-    addBlock("Inspirational Quote", "quote", "no description");
+    addBlock("💭 Inspirational Quote", "quote", "no description");
+    modal.style.display = 'none';
+    resetModal();
+});
+
+riddleBtn.addEventListener('click', () => {
+    addBlock("🤯 Daily Riddle", "riddle", "no description");
     modal.style.display = 'none';
     resetModal();
 });
 
 eventform.addEventListener('submit', (e) => {
     e.preventDefault();
-    const value = "Local events in " + document.getElementById('eventInput').value;
+    const value = "🎉 Local events in " + document.getElementById('eventInput').value;
     if (value) {
         addBlock(value, "events", document.getElementById('eventInput').value);
         modal.style.display = 'none';
@@ -103,9 +117,20 @@ eventform.addEventListener('submit', (e) => {
     }
 });
 
+weatherform.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const value = "🌤️ Local weather in " + document.getElementById('weatherInput').value;
+    if (value) {
+        addBlock(value, "weather", document.getElementById('weatherInput').value);
+        modal.style.display = 'none';
+        document.getElementById('weatherInput').value = '';
+        resetModal();
+    }
+});
+
 newsform.addEventListener('submit', (e) => {
     e.preventDefault();
-    const value = "Latest headlines from " + document.getElementById('newsInput').value;
+    const value = "📰 Latest headlines from " + document.getElementById('newsInput').value;
     if (value) {
         addBlock(value, "news", document.getElementById('newsInput').value);
         modal.style.display = 'none';
@@ -241,6 +266,7 @@ window.addEventListener('click', (e) => {
 function resetModal() {
     buttonContainer.style.display = 'block';
     eventform.style.display = 'none';
+    weatherform.style.display = 'none';
     newsform.style.display = 'none';
 }
 
